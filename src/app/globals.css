@@ -218,4 +218,11 @@
 }
 .max-width{
   max-width: 1000px;
+  @media (width < 1700px) {
+    max-width: 600px;
+    
+  }
+}
+html{
+  scroll-behavior: smooth;
 }

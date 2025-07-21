@@ -5,9 +5,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import React from "react";
+import React, { useContext } from "react";
+import { langCotext } from "./_context/LangContext";
 
 export const Carrusel = () => {
+  const data = useContext(langCotext);
+  if (!data) return null;
+  const titulo_car = data.data.tituloCarrusel;
+
   const images = [
     { id: 1, img: "/huy-phan-84Pe9HdcWtE-unsplash.jpg" },
     { id: 2, img: "/jakob-owens-qnwN8gMaofs-unsplash.jpg" },
@@ -21,10 +26,10 @@ export const Carrusel = () => {
   ];
 
   return (
-    <div className="min-h-[100vh]">
-      <section className="max-w-[700px]">
-        <h2 className="text-[#fff] dark:text-[#302b2b] text-[2rem] font-bold">Carrusel</h2>
-        <Carousel>
+    <div id="carrusel" className="min-h-[100vh]  w-full p-[5rem]">
+      <section className="max-width mx-auto">
+        <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.2rem] text-center p-[2rem] font-semibold ">{titulo_car}</h2>
+        <Carousel className="">
           <CarouselContent>
             {images.map((item) => (
               <CarouselItem className="" key={item.id}>
