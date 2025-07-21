@@ -29,7 +29,7 @@ export const Nav = () => {
     setDarklight((preVtheme) => (preVtheme === "dark" ? "light" : "dark"));
   };
   return (
-    <div className="fixed top-0 bottom-0 left-0 w-[13rem]  2xl:w-[17rem] p-[2rem] bg-[#1a244d] dark:bg-[#c1c6df] z-[900]">
+    <div className="fixed top-0 bottom-0 left-0 w-[13rem]  xl:flex hidden  2xl:w-[17rem] p-[2rem] bg-[#1a244d] dark:bg-[#c1c6df] z-[900]">
       <div className="h-full flex items-center">
         <div className="flex flex-col gap-3 ">
           <b className="text-[#fff] dark:text-[#585757]">{titulo_nav}</b>

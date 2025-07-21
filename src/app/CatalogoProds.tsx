@@ -7,15 +7,17 @@ export const CatalogoProds = () => {
   if (!data) return null;
   const titulo_catalogo = data.data.tituloCatalogoProds;
   return (
-    <div id="catalogo" className="min-h-[100vh]  w-full p-[5rem]">
-      <section className="max-w-[900px] mx-auto">
+    <div id="catalogo" className="min-h-[64vh] lg:min-h-[100vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]">
+      <section className="max-width mx-auto">
         <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.2rem] text-center p-[2rem] font-semibold ">
           {titulo_catalogo}
         </h2>
-        <article className="grid grid-cols-[repeat(auto-fill,minmax(13rem,1fr))] gap-[2rem] justify-center ">
+        <article className="grid grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] 
+         
+          gap-[2rem] justify-center ">
           {prods.map((e) => (
-            <div key={e.id}>
-                <img className="h-auto w-[15rem]" src={e.img} alt={e.imgAlt} />
+            <div key={e.id} className="bg-[#1a244d] dark:bg-[#c1c6df] rounded-3xl p-[1.5rem] flex flex-col  items-center">
+                <img className="h-auto w-[15rem] rounded-3xl hover:object-cover " src={e.img} alt={e.imgAlt} />
                 <p className="p-[5px] dark:text-[#000] text-[#fff]">{e.desc}</p>
                 <p className="p-[5px] dark:text-[#7a7777] text-[#fff]">${e.precio}</p>
             </div>
