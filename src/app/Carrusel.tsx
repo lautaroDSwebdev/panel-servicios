@@ -19,7 +19,7 @@ export const Carrusel = () => {
     { id: 3, img: "/max-bohme-6aE9Zrfl8oE-unsplash.jpg" },
     { id: 4, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
     { id: 5, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },
-    { id: 6, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
+    { id: 6, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" }, 
     { id: 7, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },
     { id: 8, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
     { id: 9, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },

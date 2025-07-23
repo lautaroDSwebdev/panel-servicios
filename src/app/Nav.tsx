@@ -1,7 +1,9 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import { langCotext } from "./_context/LangContext";
-
+// import { GiHamburgerMenu } from "react-icons/gi";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 export const Nav = () => {
   const data = useContext(langCotext);
   if (!data) return null;
@@ -12,6 +14,7 @@ export const Nav = () => {
   const func_lang = data.HandleLanguage;
 
   const [darklight, setDarklight] = useState("dark");
+  const [first, setfirst] = useState(true)
 
   useEffect(() => {
     const htmlElement = document.querySelector("html");
@@ -29,38 +32,53 @@ export const Nav = () => {
     setDarklight((preVtheme) => (preVtheme === "dark" ? "light" : "dark"));
   };
   return (
-    <div className="fixed top-0 bottom-0 left-0 w-[13rem]  xl:flex hidden  2xl:w-[17rem] p-[2rem] bg-[#1a244d] dark:bg-[#c1c6df] z-[900]">
-      <div className="h-full flex items-center">
-        <div className="flex flex-col gap-3 ">
-          <b className="text-[#fff] dark:text-[#585757]">{titulo_nav}</b>
-          <button
-            className="cursor-pointer max-w-fit p-[3px_1rem] rounded-[10px]
+    <section>
+
+      <div className={`${first ?  "translate-x-[-12rem]" : "translate-x-[0]"} w-[16rem] fixed top-0 bottom-0 left-0   transition-all .2s ease-in-out
+        xl:flex xl:flex-col    p-[1rem] bg-[#1a244d] dark:bg-[#c1c6df] z-[900]`}>
+
+
+        <div className="w-full flex justify-end py-[1rem]">
+          {
+            first ?  
+            <IoIosArrowForward onClick={() => setfirst(!first)} className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"/>
+            : 
+            <IoIosArrowBack onClick={() => setfirst(!first)} className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"/>
+          }
+        </div>
+        <div className={`${" h-full flex items-center px-[1rem]" } `}>
+          <div className="flex flex-col gap-[2rem] ">
+            {/* <b className="text-[#fff] dark:text-[#585757]">{titulo_nav}</b> */}
+            <button
+              className="cursor-pointer max-w-fit p-[3px_1rem] rounded-[10px] 
           bg-[#555252] text-[#fff] dark:text-[#4b4949] dark:bg-[#fff]"
-            onClick={themeFunction}
-          >
-            {darklight === "dark" ? "light" : "dark"}
-          </button>
-          <select
-            onChange={func_lang}
-            className="bg-[#555252] text-[#fff]
+              onClick={themeFunction}
+            >
+              {darklight === "dark" ? "light" : "dark"}
+            </button>
+
+            <select
+              onChange={func_lang}
+              className="bg-[#555252] text-[#fff]
         max-w-fit p-[3px_1rem] rounded-[10px] cursor-pointer
         dark:text-[#4b4949] dark:bg-[#fff]"
-          >
-            <option value="es">español</option>
-            <option value="en">english</option>
-            <option value="po">portuguese</option>
-          </select>
-          <a className="text-[#fff] dark:text-[#4b4949]" href="#carrusel">
-            {nav_carrusel}
-          </a>
-          <a className="text-[#fff] dark:text-[#4b4949]" href="#mapa">
-            {nav_mapa}
-          </a>
-          <a className="text-[#fff] dark:text-[#4b4949]" href="#catalogo">
-            {nav_prods}
-          </a>
+            >
+              <option value="es">español</option>
+              <option value="en">english</option>
+              <option value="po">portuguese</option>
+            </select>
+            <a className="text-[#fff] dark:text-[#4b4949]" href="#carrusel">
+              {nav_carrusel}
+            </a>
+            <a className="text-[#fff] dark:text-[#4b4949]" href="#mapa">
+              {nav_mapa}
+            </a>
+            <a className="text-[#fff] dark:text-[#4b4949]" href="#catalogo">
+              {nav_prods}
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -12,11 +12,11 @@ export default function Home() {
   const info = data.data.tituloPagina;
   return (
     <div
-      className="mx-auto   dark:bg-[#d5d7dd] bg-[#323d5a] "
+      className="mx-auto   dark:bg-[#d5d7dd] bg-[#323d5a]"
     >
       <Nav />
       <h2 className="text-[#fff] dark:text-[#302b2b] text-[5vw] 
-      md:text-[2rem] font-bold max-width mx-auto flex justify-center p-[4rem_5rem] sm:p-[8rem_5rem]">
+      md:text-[2rem] font-bold max-width mx-auto flex justify-center p-[4rem_5rem] sm:p-[8rem_5rem] text-center">
         {info}
       </h2>
       <Carrusel />
