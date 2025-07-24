@@ -17,8 +17,8 @@ export default function Home() {
     >
       {/* bg-[#1a244d] dark:bg-[#c1c6df] */}
       <Nav />
-      <h2 className="text-[#fff] dark:text-[#302b2b] text-[5vw] 
-      md:text-[2rem] font-bold max-width mx-auto flex justify-center p-[4rem_5rem] sm:p-[8rem_5rem] text-center">
+      <h2 className="text-[#fff] dark:text-[#302b2b] text-[2rem]
+      md:text-[2rem] lg:text-[3rem]  font-bold max-width mx-auto flex justify-center p-[4rem_3rem] sm:p-[8rem_5rem] text-center">
         {info}
       </h2>
       <Carrusel />

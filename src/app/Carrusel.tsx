@@ -24,7 +24,7 @@ export const Carrusel = () => {
     <div id="carrusel" className="min-h-[50vh] lg:min-h-[100vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]  ">
       <section className="max-width mx-auto">
         <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.4rem] decoration-solid underline p-[2rem]
-         text-center sm:p-[2rem] font-semibold">{titulo_car}</h2>
+         text-center sm:p-[2rem] lg:text-[2rem] font-semibold">{titulo_car}</h2>
         <Carousel className="">
           <CarouselContent className="">
             {images.map((item) => (
