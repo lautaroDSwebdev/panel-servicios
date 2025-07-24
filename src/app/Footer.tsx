@@ -15,7 +15,7 @@ export const Footer = () => {
           ))}
         </div> */}
         {/* Columna derecha: redes sociales */}
-        <div className="flex-1 flex flex-col gap-2 items-end">
+        <div className="flex-1 flex flex-col gap-2 items-center">
           <h4 className="font-bold mb-2 text-[#fff] dark:text-[#000]">Redes Sociales</h4>
           <div className="flex flex-col gap-1">
             {socialLinks.map((e) => (
