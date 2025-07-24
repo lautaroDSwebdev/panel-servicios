@@ -6,6 +6,7 @@ import { Carrusel } from "./Carrusel";
 import { Mapa } from "./Mapa";
 import { CatalogoProds } from "./CatalogoProds";
 import { Footer } from "./Footer";
+import { Form } from "./Form";
 
 export default function Home() {
   const data = useContext(langCotext);
@@ -24,6 +25,7 @@ export default function Home() {
       <Carrusel />
       <Mapa />
       <CatalogoProds />
+      <Form />
       <Footer />
     </div>
   );

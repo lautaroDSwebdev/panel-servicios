@@ -6,6 +6,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { RiCarouselView } from "react-icons/ri";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { RiShoppingCartFill } from "react-icons/ri";
+import { FaWpforms } from "react-icons/fa6";
 export const Nav = () => {
   const data = useContext(langCotext);
   if (!data) return null;
@@ -80,6 +81,10 @@ export const Nav = () => {
             </a>
             <a className="text-[#fff]  dark:text-[#4b4949] " href="#catalogo">
               <RiShoppingCartFill onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem] "/>
+              {/* {nav_prods} */}
+            </a>
+            <a className="text-[#fff]  dark:text-[#4b4949] " href="#formulario">
+              <FaWpforms onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem] "/>
               {/* {nav_prods} */}
             </a>
           </div>
