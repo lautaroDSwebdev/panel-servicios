@@ -5,7 +5,8 @@ export const Form = () => {
   return (
     <div id="formulario" className="min-h-[50vh] lg:min-h-[100vh] w-full p-[4rem_5rem] sm:p-[8rem_5rem] ">
       <section className=" mx-auto flex flex-col items-center">
-        <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.4rem] lg:text-[1.6rem] decoration-solid underline font-semibold text-center p-[2rem]">
+        <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.4rem] decoration-solid underline p-[2rem]
+         text-center sm:p-[2rem] lg:text-[2rem] font-semibold">
           Formulario de contacto
         </h2>
         <form className="bg-[#393676] dark:bg-[#e0deff] rounded-3xl p-[2rem] flex flex-col gap-6 w-full max-w-md shadow-lg">
