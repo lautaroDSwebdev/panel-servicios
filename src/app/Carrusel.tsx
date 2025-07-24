@@ -14,21 +14,17 @@ export const Carrusel = () => {
   const titulo_car = data.data.tituloCarrusel;
 
   const images = [
-    { id: 1, img: "/huy-phan-84Pe9HdcWtE-unsplash.jpg" },
-    { id: 2, img: "/jakob-owens-qnwN8gMaofs-unsplash.jpg" },
-    { id: 3, img: "/max-bohme-6aE9Zrfl8oE-unsplash.jpg" },
-    { id: 4, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
-    { id: 5, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },
-    { id: 6, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" }, 
-    { id: 7, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },
-    { id: 8, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
-    { id: 9, img: "/rosario-janza-LHI32I1iodw-unsplash.jpg" },
+    { id: 1, img: "/huy-phan-84Pe9HdcWtE-unsplash.webp" },
+    { id: 2, img: "/jakob-owens-qnwN8gMaofs-unsplash.webp" },
+    { id: 3, img: "/max-bohme-6aE9Zrfl8oE-unsplash.webp" },
+    { id: 4, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.webp" },
   ];
 
   return (
-    <div id="carrusel" className="min-h-[64vh] lg:min-h-[100vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]">
+    <div id="carrusel" className="min-h-[50vh] lg:min-h-[100vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]  ">
       <section className="max-width mx-auto">
-        <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.2rem] text-center sm:p-[2rem] font-semibold">{titulo_car}</h2>
+        <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.4rem] decoration-solid underline p-[2rem]
+         text-center sm:p-[2rem] font-semibold">{titulo_car}</h2>
         <Carousel className="">
           <CarouselContent className="">
             {images.map((item) => (

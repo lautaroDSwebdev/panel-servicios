@@ -1,9 +1,11 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
 import { langCotext } from "./_context/LangContext";
-// import { GiHamburgerMenu } from "react-icons/gi";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import { RiCarouselView } from "react-icons/ri";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { RiShoppingCartFill } from "react-icons/ri";
 export const Nav = () => {
   const data = useContext(langCotext);
   if (!data) return null;
@@ -34,8 +36,9 @@ export const Nav = () => {
   return (
     <section>
 
-      <div className={`${first ?  "translate-x-[-12rem]" : "translate-x-[0]"} w-[16rem] fixed top-0 bottom-0 left-0   transition-all .2s ease-in-out
-        xl:flex xl:flex-col    p-[1rem] bg-[#1a244d] dark:bg-[#c1c6df] z-[900]`}>
+      <div className={`${first ?  "translate-x-[-12rem]" : "translate-x-[0]"} w-[16rem] 
+      fixed top-0 bottom-0 left-0   transition-all .2s ease-in-out
+        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676] rounded-3xl dark:bg-[#e0deff] z-[900]`}>
 
 
         <div className="w-full flex justify-end py-[1rem]">
@@ -46,7 +49,7 @@ export const Nav = () => {
             <IoIosArrowBack onClick={() => setfirst(!first)} className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"/>
           }
         </div>
-        <div className={`${" h-full flex items-center px-[1rem]" } `}>
+        <div className={`${" h-[30%] flex items-center px-[1rem]" } `}>
           <div className="flex flex-col gap-[2rem] ">
             {/* <b className="text-[#fff] dark:text-[#585757]">{titulo_nav}</b> */}
             <button
@@ -67,14 +70,17 @@ export const Nav = () => {
               <option value="en">english</option>
               <option value="po">portuguese</option>
             </select>
-            <a className="text-[#fff] dark:text-[#4b4949]" href="#carrusel">
-              {nav_carrusel}
+            <a className="text-[#fff] dark:text-[#4b4949] " href="#carrusel">
+              {/* {nav_carrusel} */}
+              <RiCarouselView onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem]"/>
             </a>
-            <a className="text-[#fff] dark:text-[#4b4949]" href="#mapa">
-              {nav_mapa}
+            <a className="text-[#fff]  dark:text-[#4b4949] " href="#mapa">
+              <FaMapMarkedAlt onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem]"/>
+              {/* {nav_mapa} */}
             </a>
-            <a className="text-[#fff] dark:text-[#4b4949]" href="#catalogo">
-              {nav_prods}
+            <a className="text-[#fff]  dark:text-[#4b4949] " href="#catalogo">
+              <RiShoppingCartFill onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem] "/>
+              {/* {nav_prods} */}
             </a>
           </div>
         </div>

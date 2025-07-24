@@ -11,9 +11,10 @@ export default function Home() {
   if (!data) return null;
   const info = data.data.tituloPagina;
   return (
-    <div
-      className="mx-auto   dark:bg-[#d5d7dd] bg-[#323d5a]"
+    <div id="inicio"
+      className="mx-auto   dark:bg-[#f7f7f7] bg-[#1a244d]"
     >
+      {/* bg-[#1a244d] dark:bg-[#c1c6df] */}
       <Nav />
       <h2 className="text-[#fff] dark:text-[#302b2b] text-[5vw] 
       md:text-[2rem] font-bold max-width mx-auto flex justify-center p-[4rem_5rem] sm:p-[8rem_5rem] text-center">
