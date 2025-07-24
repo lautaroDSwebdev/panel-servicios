@@ -38,7 +38,7 @@ export const Nav = () => {
 
       <div className={`${first ?  "translate-x-[-12rem]" : "translate-x-[0]"} w-[16rem] 
       fixed top-0 bottom-0 left-0   transition-all .2s ease-in-out
-        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676] rounded-3xl dark:bg-[#e0deff] z-[900]`}>
+        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676]  dark:bg-[#e0deff] rounded-3xl z-[900]`}>
 
 
         <div className="w-full flex justify-end py-[1rem]">
