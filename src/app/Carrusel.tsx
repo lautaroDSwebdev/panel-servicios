@@ -36,8 +36,12 @@ export const Carrusel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="text-[#000000] text-[3rem] scale-200 cursor-pointer font-bold" />
-          <CarouselNext className="text-[#000000] text-[3rem] scale-200 cursor-pointerfont-bold "/>
+          <CarouselPrevious className="text-[#ffffff] hover:bg-[#e0deff]
+           dark:text-[#000000] dark:hover:bg-[#393676] bg-[#393676]
+            dark:bg-[#a5a1e6] text-[19rem]  cursor-pointer font-bold" />
+          <CarouselNext className="text-[#ffffff] hover:bg-[#e0deff]
+           dark:text-[#020202] dark:hover:bg-[#393676] bg-[#393676] 
+           dark:bg-[#a5a1e6]  text-[3rem]  cursor-pointer font-bold "/>
         </Carousel>
       </section>
     </div>

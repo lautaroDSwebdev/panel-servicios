@@ -108,7 +108,7 @@ export const Nav = () => {
             />
           )}
         </div>
-        <div className={`${" h-[30%] flex items-center px-[1rem]"} `}>
+        <div className={`${" h-full flex items-center px-[1rem]"} `}>
           <div className="flex flex-col gap-[2rem] ">
             <button
               className="cursor-pointer max-w-fit p-[3px_1rem] rounded-[10px] 
