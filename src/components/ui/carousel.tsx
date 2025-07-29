@@ -162,7 +162,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-[80%] sm:basis-[90%] xl:basis-[50%]",
+        "min-w-0 shrink-0 grow-0 basis-[100%] sm:basis-[90%] xl:basis-[70%]",
         orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
