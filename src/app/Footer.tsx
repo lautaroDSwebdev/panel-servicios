@@ -19,7 +19,7 @@ export const Footer = () => {
           <h4 className="font-bold mb-2 text-[#fff] dark:text-[#000]">Redes Sociales</h4>
           <div className="flex flex-col gap-1">
             {socialLinks.map((e) => (
-              <a className="text-[#fff] dark:text-[#000] text-[1.2rem]" href={e.href} target="_blank">
+              <a key={e.id} className="text-[#fff] dark:text-[#000] text-[1.2rem]" href={e.href} target="_blank">
                 {e.label}
               </a>
             ))}
@@ -28,7 +28,9 @@ export const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-4 text-center  text-[#fff] dark:text-[#000] text-[1.2rem]">
-        &copy; {new Date().getFullYear()} Lautaro Di Salvo. Todos los derechos
+        &copy; {new Date().getFullYear()} Lautaro Di Salvo. 
+        <br className="sm:hidden" />
+        Todos los derechos
         reservados.
       </div>
     </footer>

@@ -9,7 +9,7 @@ export const prods = [
     discountPrice: null,
     img: "https://www.masfarmacias.com/wp-content/uploads/7799075000680-768x768.jpg",
     imgAlt: "Imagen Producto",
-    precio: 36279,
+    precio: 36.279,
     masComprado: 12
   },
   {
@@ -21,7 +21,7 @@ export const prods = [
     discountPrice: null,
     img: "https://www.masfarmacias.com/wp-content/uploads/7798095419694-768x768.jpg",
     imgAlt: "Imagen Producto",
-    precio: 46955,
+    precio: 46.955,
     masComprado: 10
   },
   {
@@ -33,7 +33,7 @@ export const prods = [
     discountPrice: null,
     img: "https://www.masfarmacias.com/wp-content/uploads/7798095419717-768x768.jpg",
     imgAlt: "Imagen Producto",
-    precio: 37206,
+    precio: 37.206,
     masComprado: 3
   },
   {
@@ -45,7 +45,7 @@ export const prods = [
     discountPrice: null,
     img: "https://www.masfarmacias.com/wp-content/uploads/7799075000697-768x768.jpg",
     imgAlt: "Imagen Producto",
-    precio: 42153,
+    precio: 42.153,
     masComprado: 4
   },
   {
@@ -57,7 +57,7 @@ export const prods = [
     discountPrice: null,
     img: "https://www.masfarmacias.com/wp-content/uploads/7798095419670-768x768.jpg",
     imgAlt: "Imagen Producto",
-    precio: 64817,
+    precio: 64.817,
     masComprado: 15
   },
   {
@@ -69,7 +69,7 @@ export const prods = [
     discountPrice: 65.025,
     img: "https://www.masfarmacias.com/wp-content/uploads/3337875761031-1.jpg",
     imgAlt: "Imagen Producto",
-    precio: 42266,
+    precio: 42.266,
     masComprado: 20
   }
 ];

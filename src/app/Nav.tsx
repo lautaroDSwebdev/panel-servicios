@@ -17,7 +17,7 @@ export const Nav = () => {
   const func_lang = data.HandleLanguage;
 
   const [darklight, setDarklight] = useState("dark");
-  const [first, setfirst] = useState(true)
+  const [first, setfirst] = useState(true);
 
   useEffect(() => {
     const htmlElement = document.querySelector("html");
@@ -34,25 +34,82 @@ export const Nav = () => {
   const themeFunction = () => {
     setDarklight((preVtheme) => (preVtheme === "dark" ? "light" : "dark"));
   };
+  const navLinks = [
+    {
+      id: 1,
+      href: "carrusel",
+      Icon: RiCarouselView,
+      // label: nav_carrusel,
+    },
+    {
+      id: 2,
+      href: "mapa",
+      Icon: FaMapMarkedAlt,
+      // label: nav_mapa,
+    },
+    {
+      id: 3,
+      href: "catalogo",
+      Icon: RiShoppingCartFill,
+      // label: nav_prods,
+    },
+    {
+      id: 4,
+      href: "formulario",
+      Icon: FaWpforms,
+      // label: nav_prods,
+    },
+  ];
+  const [activeSection, setActiveSection] = useState("");
+
+  // Scroll spy: detecta la sección activa
+  useEffect(() => {
+    const handleScroll = () => {
+      for (let i = navLinks.length - 1; i >= 0; i--) {
+        const section = document.getElementById(navLinks[i].href);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+         
+          if (rect.top <= 200 && rect.bottom >= 560) {
+            
+            setActiveSection(navLinks[i].href);
+            break;
+          }
+       
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+ 
+
   return (
     <section>
-
-      <div className={`${first ?  "translate-x-[-12rem]" : "translate-x-[0]"} w-[16rem] 
+      <div
+        className={`${
+          first ? "translate-x-[-13rem]" : "translate-x-[0]"
+        } w-[16rem] 
       fixed top-0 bottom-0 left-0   transition-all .2s ease-in-out
-        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676]  dark:bg-[#e0deff] rounded-3xl z-[900]`}>
-
-
+        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676]  dark:bg-[#e0deff] rounded-3xl z-[900]`}
+      >
         <div className="w-full flex justify-end py-[1rem]">
-          {
-            first ?  
-            <IoIosArrowForward onClick={() => setfirst(!first)} className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"/>
-            : 
-            <IoIosArrowBack onClick={() => setfirst(!first)} className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"/>
-          }
+          {first ? (
+            <IoIosArrowForward
+              onClick={() => setfirst(!first)}
+              className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"
+            />
+          ) : (
+            <IoIosArrowBack
+              onClick={() => setfirst(!first)}
+              className="h-auto w-[2rem] text-[#fff] dark:text-[#000]  cursor-pointer"
+            />
+          )}
         </div>
-        <div className={`${" h-[30%] flex items-center px-[1rem]" } `}>
+        <div className={`${" h-[30%] flex items-center px-[1rem]"} `}>
           <div className="flex flex-col gap-[2rem] ">
-            {/* <b className="text-[#fff] dark:text-[#585757]">{titulo_nav}</b> */}
             <button
               className="cursor-pointer max-w-fit p-[3px_1rem] rounded-[10px] 
           bg-[#555252] text-[#fff] dark:text-[#4b4949] dark:bg-[#fff]"
@@ -71,22 +128,22 @@ export const Nav = () => {
               <option value="en">english</option>
               <option value="po">portuguese</option>
             </select>
-            <a className="text-[#fff] dark:text-[#4b4949] " href="#carrusel">
-              {/* {nav_carrusel} */}
-              <RiCarouselView onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem]"/>
-            </a>
-            <a className="text-[#fff]  dark:text-[#4b4949] " href="#mapa">
-              <FaMapMarkedAlt onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem]"/>
-              {/* {nav_mapa} */}
-            </a>
-            <a className="text-[#fff]  dark:text-[#4b4949] " href="#catalogo">
-              <RiShoppingCartFill onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem] "/>
-              {/* {nav_prods} */}
-            </a>
-            <a className="text-[#fff]  dark:text-[#4b4949] " href="#formulario">
-              <FaWpforms onClick={() => setfirst(!first)} className="h-[3rem] w-[3rem] "/>
-              {/* {nav_prods} */}
-            </a>
+            {navLinks.map(({ href, Icon }) => (
+              <a
+                key={href}
+                className={`p-[.5rem] w-fit ${activeSection === href 
+                    ? "bg-[#fff] rounded-4xl"
+                    : "text-[#000000]"}`}
+                href={`#${href}`}
+              >
+                <Icon
+                  onClick={() => setfirst(!first)}
+                  className={`h-[4rem] w-[4rem] text-[#fff] dark:text-[#000]`}
+                />
+
+                {/* {label} */}
+              </a>
+            ))}
           </div>
         </div>
       </div>

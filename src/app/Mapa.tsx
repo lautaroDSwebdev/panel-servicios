@@ -6,7 +6,7 @@ export const Mapa = () => {
   if (!data) return null;
   const info_mapa = data.data.tituloMapa
   return (
-    <div id="mapa" className="min-h-[50vh] lg:min-h-[100vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]">
+    <div id="mapa" className="min-h-[50vh] lg:min-h-[80vh]  w-full p-[4rem_5rem] sm:p-[8rem_5rem]">
       <section className="max-width mx-auto flex justify-center flex-col ">
       <h2 className="text-[#fff] dark:text-[#302b2b] text-[1.4rem] lg:text-[1.6rem] decoration-solid underline font-semibold text-center p-[2rem]">{info_mapa}</h2>
         <iframe className=" flex justify-center"
