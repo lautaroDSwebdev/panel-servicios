@@ -14,7 +14,7 @@ export default function Home() {
   const info = data.data.tituloPagina;
   return (
     <div id="inicio"
-      className="mx-auto   dark:bg-[#f8f7ff] bg-[#1a244d]"
+      className="mx-auto   dark:bg-[#dbffff] bg-[#1a244d]"
     >
       {/* bg-[#1a244d] dark:bg-[#c1c6df] */}
       <Nav />
