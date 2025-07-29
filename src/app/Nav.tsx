@@ -131,14 +131,14 @@ export const Nav = () => {
             {navLinks.map(({ href, Icon }) => (
               <a
                 key={href}
-                className={`p-[.5rem] w-fit ${activeSection === href 
-                    ? "bg-[#fff] rounded-4xl"
+                className={`p-[.5rem] w-fit bg-[#9b97f0] rounded-4xl ${activeSection === href 
+                    ? "bg-[#6661c2] rounded-4xl "
                     : "text-[#000000]"}`}
                 href={`#${href}`}
               >
                 <Icon
                   onClick={() => setfirst(!first)}
-                  className={`h-[4rem] w-[4rem] text-[#fff] dark:text-[#000]`}
+                  className={`h-[4rem] w-[4rem] dark:text-[#ffffff] text-[#fff] `}
                 />
 
                 {/* {label} */}
