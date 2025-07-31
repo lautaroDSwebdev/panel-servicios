@@ -17,7 +17,7 @@ export const CatalogoProds = () => {
          
           gap-[2rem] justify-center ">
           {prods.map((e) => (
-            <div key={e.id} className="bg-[#393676] dark:bg-[#e0deff] rounded-3xl p-[1.5rem] flex flex-col  items-center overflow-hidden">
+            <div key={e.id} className="bg-[#393676] dark:bg-[#e0deff] hover:bg-[#c7c3f3] rounded-3xl p-[1.5rem] flex flex-col  items-center overflow-hidden">
                 <img className="h-auto w-[15rem] rounded-3xl hover: relative opacity-85 cursor-pointer aspect-[1/1]
                 hover:opacity-100 transition-all ease-in-out .3s scale-100 hover:scale-105 " src={e.img} alt={e.imgAlt} />
                 <p className="p-[5px] dark:text-[#494747] text-[#fff] text-center">{e.desc}</p>

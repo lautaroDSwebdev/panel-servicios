@@ -7,6 +7,7 @@ import { Mapa } from "./Mapa";
 import { CatalogoProds } from "./CatalogoProds";
 import { Footer } from "./Footer";
 import { Form } from "./Form";
+import { NavMobile } from "./NavMobile";
 
 export default function Home() {
   const data = useContext(langCotext);
@@ -14,12 +15,13 @@ export default function Home() {
   const info = data.data.tituloPagina;
   return (
     <div id="inicio"
-      className="mx-auto   dark:bg-[#dbffff] bg-[#1a244d]"
+      className="mx-auto   dark:bg-[#dbffff] bg-[#1a244d] "
     >
       {/* bg-[#1a244d] dark:bg-[#c1c6df] */}
       <Nav />
+      <NavMobile />
       <h1 className="text-[#fff] dark:text-[#302b2b] text-[2rem]
-      md:text-[2rem] lg:text-[3rem]  font-bold max-width mx-auto flex justify-center p-[4rem_3rem] sm:p-[8rem_5rem] text-center">
+      md:text-[2rem] lg:text-[3rem]  font-bold max-width mx-auto flex justify-center p-[7rem_3rem] sm:p-[8rem_5rem] text-center">
         {info}
       </h1>
       <Carrusel />
