@@ -9,10 +9,7 @@ import { FaWpforms } from "react-icons/fa6";
 export const Nav = () => {
   const data = useContext(langCotext);
   if (!data) return null;
-  const titulo_nav = data.data.tituloNavbar;
-  const nav_carrusel = data.data.navCarrusel,
-    nav_mapa = data.data.navMapa,
-    nav_prods = data.data.navCatalogo;
+ 
   const func_lang = data.HandleLanguage;
 
   const [darklight, setDarklight] = useState("dark");

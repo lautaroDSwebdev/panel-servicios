@@ -86,7 +86,7 @@ export const NavMobile = () => {
       <div
         className={` 
       fixed top-0  left-[10px] right-[10px]    transition-all .2s ease-in-out
-        xl:flex xl:flex-col   justify-center p-[4px] bg-[#393676ce] backdrop-blur-[10px] dark:bg-[#e0deff] rounded-3xl z-[900]`}
+        xl:flex xl:flex-col   justify-center p-[4px] bg-[#393676]  dark:bg-[#e0deff] rounded-3xl z-[900]`}
       >
         <div className="w-full flex justify-end p-[1rem]">
           {first ? (
@@ -105,7 +105,7 @@ export const NavMobile = () => {
       <div
         className={`${first ? "translate-y-[-44rem] opacity-0 transition-all 4s ease" : "translate-y-[79px] opacity-100 transition-all 4s ease"} 
       fixed top-0  left-[10px] right-[10px]    
-        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676ce] backdrop-blur-[10px]   dark:bg-[#e0deff] z-[0] rounded-3xl`}
+        xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676]    dark:bg-[#e0deff] z-[0] rounded-3xl`}
       >
         <div
           className={`${" h-fit flex items-center px-[1rem] justify-center"} `}
