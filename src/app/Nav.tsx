@@ -9,7 +9,7 @@ import { FaWpforms } from "react-icons/fa6";
 export const Nav = () => {
   const data = useContext(langCotext);
   if (!data) return null;
- 
+
   const func_lang = data.HandleLanguage;
 
   const [darklight, setDarklight] = useState("dark");
@@ -65,13 +65,13 @@ export const Nav = () => {
         const section = document.getElementById(navLinks[i].href);
         if (section) {
           const rect = section.getBoundingClientRect();
-         
+
           if (rect.top <= 200 && rect.bottom >= 560) {
-            
+
             setActiveSection(navLinks[i].href);
             break;
           }
-       
+
         }
       }
     };
@@ -80,14 +80,13 @@ export const Nav = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- 
+
 
   return (
     <section className="md:block hidden">
       <div
-        className={`${
-          first ? "translate-x-[-12rem]" : "translate-x-[0] "
-        } w-[16rem] 
+        className={`${first ? "translate-x-[-12rem]" : "translate-x-[0] "
+          } w-[16rem] 
       fixed top-0 bottom-0 left-0    transition-all .2s ease-in-out
         xl:flex xl:flex-col   justify-center p-[1rem] bg-[#393676ce] backdrop-blur-[10px]  dark:bg-[#e0deff] rounded-3xl z-[900]`}
       >
@@ -104,6 +103,7 @@ export const Nav = () => {
             />
           )}
         </div>
+        <b className="text-[#fff] text-[1.5rem]">Panel dinamico</b>
         <div className={`${" h-[80%] flex items-center px-[1rem]"} `}>
           <div className="flex flex-col gap-[2rem] ">
             <button
@@ -127,9 +127,9 @@ export const Nav = () => {
             {navLinks.map(({ href, Icon }) => (
               <a
                 key={href}
-                className={`p-[.5rem] w-fit bg-[#9b97f0] rounded-4xl ${activeSection === href 
-                    ? "bg-[#6661c2] rounded-4xl "
-                    : "text-[#000000]"}`}
+                className={`p-[.5rem] w-fit bg-[#9b97f0] rounded-4xl ${activeSection === href
+                  ? "bg-[#6661c2] rounded-4xl "
+                  : "text-[#000000]"}`}
                 href={`#${href}`}
               >
                 <Icon
