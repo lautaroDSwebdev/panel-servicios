@@ -14,10 +14,10 @@ export const Carrusel = () => {
   const titulo_car = data.data.tituloCarrusel;
 
   const images = [
-    { id: 1, img: "/huy-phan-84Pe9HdcWtE-unsplash.webp" },
-    { id: 2, img: "/jakob-owens-qnwN8gMaofs-unsplash.webp" },
-    { id: 3, img: "/max-bohme-6aE9Zrfl8oE-unsplash.webp" },
-    { id: 4, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.webp" },
+    { id: 1, img: "/huy-phan-84Pe9HdcWtE-unsplash.jpg" },
+    { id: 2, img: "/jakob-owens-qnwN8gMaofs-unsplash.jpg" },
+    { id: 3, img: "/max-bohme-6aE9Zrfl8oE-unsplash.jpg" },
+    { id: 4, img: "/micah-sammie-chaffin-Vs3OXyzKUkg-unsplash.jpg" },
   ];
 
   return (

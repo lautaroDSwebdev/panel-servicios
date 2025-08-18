@@ -134,10 +134,9 @@ export const Nav = () => {
               >
                 <Icon
                   onClick={() => setfirst(!first)}
-                  className={`h-[4rem] w-[4rem] dark:text-[#ffffff] text-[#fff] `}
+                  className={`h-[2rem] w-[2rem] xl:h-[3rem] xl:w-[3rem] dark:text-[#ffffff] text-[#fff] `}
                 />
 
-                {/* {label} */}
               </a>
             ))}
           </div>

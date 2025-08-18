@@ -17,11 +17,12 @@ export const CatalogoProds = () => {
          
           gap-[2rem] justify-center ">
           {prods.map((e) => (
-            <div key={e.id} className="bg-[#393676] dark:bg-[#e0deff] hover:bg-[#504e7c] 
+            <div key={e.id} className="bg-[#393676] dark:bg-[#e0deff] hover:bg-[#7571b6] 
+            transition-all ease-in-out .3s scale-100 hover:scale-105
             hover:dark:bg-[#bfbce9] 
             rounded-3xl p-[1.5rem] flex flex-col  items-center overflow-hidden">
-              <img className="h-auto w-[15rem] rounded-3xl hover: relative opacity-85 cursor-pointer aspect-[1/1]
-                hover:opacity-100 transition-all ease-in-out .3s scale-100 hover:scale-105 " src={e.img} alt={e.imgAlt} />
+              <img className="h-auto w-[15rem] rounded-3xl hover: relative  cursor-pointer aspect-[1/1]
+                  " src={e.img} alt={e.imgAlt} />
               <p className="p-[5px] dark:text-[#494747] text-[#fff] text-center  overflow-hidden text-ellipsis">{e.desc}</p>
               <p className="p-[5px] dark:text-[#000]  text-[#fff] text-[1.5rem]">${e.precio}</p>
             </div>

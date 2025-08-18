@@ -13,19 +13,19 @@ export const Form = () => {
           <input
             type="text"
             placeholder="Nombre"
-            className="bg-[#555252] text-[#fff] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
+            className="bg-[#ffffff] text-[#000] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
           />
           <input
             type="email"
             placeholder="Correo electrónico"
-            className="bg-[#555252] text-[#fff] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
+            className="bg-[#ffffff] text-[#000] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
           />
           <input
             type="text"
             placeholder="Mensaje"
-            className="bg-[#555252] text-[#fff] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
+            className="bg-[#ffffff] text-[#000] dark:text-[#4b4949] dark:bg-[#fff] p-3 rounded-[10px] outline-none focus:ring-2 focus:ring-primary transition-all"
           />
-          <Button type="submit" className="mt-2">Enviar</Button>
+          <Button  type="submit" className="mt-2 hover:bg-[#626262] dark:bg-[#000000] dark:text-[#fff] cursor-pointer">Enviar</Button>
         </form>
       </section>
     </div>
